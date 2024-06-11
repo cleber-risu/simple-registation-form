@@ -21,19 +21,19 @@
       <h1>Crie e compartilhe seu evento.</h1>
       <p>O primeiro passo é preencher este formulário de inscrição</p>
     </header>
-    <form>
+    <form id="my-form">
       <fieldset>
         <div class="fieldset-wrapper">
           <legend>Informações do Evento</legend>
 
           <div class="input-wrapper">
             <label for="event-title">Título do evento <span>(mínimo 8 caracteres)</span></label>
-            <input type="text" id="event-title" />
+            <input type="text" id="event-title" required minlength="8" />
           </div>
 
           <div class="input-wrapper">
             <label for="event-link">Link do evento <span>(comece com https://)</span></label>
-            <input type="url" id="event-link" />
+            <input type="url" id="event-link" required />
           </div>
 
           <div class="input-wrapper">
@@ -64,12 +64,12 @@
 
           <div class="input-wrapper">
             <label for="event-email">E-mail do administrador <span>(digite um e-mail válido)</span></label>
-            <input type="email" id="event-email" />
+            <input type="email" id="event-email" required />
           </div>
 
           <div class="input-wrapper">
             <label for="event-password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
-            <input type="password" id="event-password" />
+            <input type="password" id="event-password" minlength="8" required />
           </div>
 
           <div class="checkbox-wrapper">
@@ -86,17 +86,17 @@
           <div class="col-3">
             <div class="input-wrapper">
               <label for="event-date">Data</span></label>
-              <input type="date" id="event-date" />
+              <input type="date" id="event-date" required />
             </div>
 
             <div class="input-wrapper">
               <label for="event-begin">Das</label>
-              <input type="time" id="event-begin" />
+              <input type="time" id="event-begin" required />
             </div>
 
             <div class="input-wrapper">
               <label for="event-begin">Até</label>
-              <input type="time" id="event-begin" />
+              <input type="time" id="event-begin" required />
             </div>
           </div>
 
@@ -104,7 +104,7 @@
       </fieldset>
     </form>
     <footer class="form-buttons">
-      <input class="button" type="submit" value="Salvar evento">
+      <input class="button" type="submit" form="my-form" value="Salvar evento">
     </footer>
   </div>
 </body>
